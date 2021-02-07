@@ -7,13 +7,19 @@ Rails.application.routes.draw do
   # resources :tags
   # resources :users
 
+  # AUTH
+  post "/register" => "auth#register"
+  post "/login" => "auth#login"
+  post "/register" => "auth#register"
+
+
   # USER ROUTES
   get "/users" => "users#index"
-  get "/users/:id" => "users#show"
-  get "/users/:id/tags" => "users#tags"
-  get "/users/:id/trinkets" => "users#trinkets"
-  get "/users/:id/zones" => "users#zones"
 
+  get "/home" => "users#home"
+
+  get "/users/:id" => "users#show"
+  get "/users/:id/tags" => "tags#index"
   # USERTRINKET ROUTES
 
   # TRINKET ROUTES

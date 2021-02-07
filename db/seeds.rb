@@ -7,11 +7,13 @@ Region.destroy_all
 User.destroy_all
 
 User.create!(
-    username: "Admin"
+    username: "Admin",
+    password: "123"
 )
 
 User.create!(
-    username: "Bobby"
+    username: "Bobby",
+    password: '456'
 )
 
 trinkets = 

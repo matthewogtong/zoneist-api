@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 2021_02_05_171241) do
 
   create_table "users", force: :cascade do |t|
     t.string "username"
+    t.string "password_digest"
     t.integer "tokens", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

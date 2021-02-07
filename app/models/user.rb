@@ -5,4 +5,7 @@ class User < ApplicationRecord
     has_many :tags
     has_many :trinkets, through: :usertrinkets
     has_many :regions, through: :userregions
+    
+    has_secure_password
+    validates :username, uniqueness: true
 end
