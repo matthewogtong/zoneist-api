@@ -19,7 +19,9 @@ Rails.application.routes.draw do
   get "/home" => "users#home"
 
   get "/users/:id" => "users#show"
-  get "/users/:id/tags" => "tags#index"
+  get "/users/:id/tags" => "users#tags"
+  get "/users/:id/regions" => "users#regions"
+  post "/users/:id/regions" => "users#purchase_region"
   # USERTRINKET ROUTES
 
   # TRINKET ROUTES

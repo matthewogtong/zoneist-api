@@ -15,6 +15,18 @@ class UsersController < ApplicationController
         render json: user.tags
     end
 
+    def regions
+        user = User.find(params[:id])
+        render json: user.regions
+    end
+
+    def purchase_region
+        user = User.find(params[:id])
+        region = Region.find(params[:user][:id])
+        Userregion.create!(user_id: user.id, region_id: params[:user][:id], is_bought: true)
+        render json: region
+    end
+
     def home
         user = AuthorizeRequest.new(request.headers).user
 
@@ -30,4 +42,8 @@ class UsersController < ApplicationController
     def user_params 
         params.permit(:username, :password)
     end
+
+    # def region_params
+    #     params.permit(:id, :name, :price)
+    # end
 end
