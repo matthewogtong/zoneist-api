@@ -23,6 +23,8 @@ class UsersController < ApplicationController
     def purchase_region
         user = User.find(params[:id])
         region = Region.find(params[:user][:id])
+        user.tokens = user.tokens - region.price
+        user.update(tokens: user.tokens)
         Userregion.create!(user_id: user.id, region_id: params[:user][:id], is_bought: true)
         render json: region
     end

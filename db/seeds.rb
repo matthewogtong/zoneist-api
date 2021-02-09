@@ -8,7 +8,8 @@ User.destroy_all
 
 User.create!(
     username: "Admin",
-    password: "123"
+    password: "123",
+    tokens: 100
 )
 
 User.create!(
