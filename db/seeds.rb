@@ -31,12 +31,40 @@ trinkets =
 regions = 
 [
     {
-       name: "beach",
-       price: 2
+       name: "Barcelona",
+       price: 3
     },
     {
-        name: "torii",
-        price: 4
+        name: "Blue Lagoon",
+        price: 3
+    },
+    {
+        name: "Blue Lake Torii",
+        price: 0
+    },
+    {
+        name: "Giza",
+        price: 3
+    },
+    {
+        name: "Iguazu Falls",
+        price: 3
+    },
+    {
+        name: "Lofoten Islands",
+        price: 0
+    },
+    {
+        name: "Machu Picchu",
+        price: 8
+    },
+    {
+        name: "NYC",
+        price: 0
+    },
+    {
+        name: "Venice",
+        price: 8
     }
 ]
 

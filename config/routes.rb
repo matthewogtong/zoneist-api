@@ -28,6 +28,7 @@ Rails.application.routes.draw do
   # USERREGION ROUTES
 
   # REGION ROUTES
+  get "/regions" => "regions#index"
 
   # TAG ROUTES
 
