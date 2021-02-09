@@ -27,8 +27,8 @@ Rails.application.routes.draw do
   post "/users/:id/regions" => "users#purchase_region"
 
   get "/users/:id/trinkets" => "users#trinkets"
-  post "/users/:id/trinkets" => "users#purchase_trinkets"
-  
+  post "/users/:id/trinkets" => "users#purchase_trinket"
+
   # USERTRINKET ROUTES
 
   # TRINKET ROUTES

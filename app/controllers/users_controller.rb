@@ -34,6 +34,15 @@ class UsersController < ApplicationController
         render json: user.trinkets
     end
 
+    def purchase_trinket
+        user = User.find(params[:id])
+        trinket = Trinket.find(params[:user][:id])
+        user.tokens = user.tokens - trinket.price
+        user.update(tokens: user.tokens)
+        Usertrinket.create!(user_id: user.id, trinket_id: params[:user][:id], is_bought: true)
+        render json: trinket
+    end
+
     def home
         user = AuthorizeRequest.new(request.headers).user
 
@@ -50,7 +59,4 @@ class UsersController < ApplicationController
         params.permit(:username, :password)
     end
 
-    # def region_params
-    #     params.permit(:id, :name, :price)
-    # end
 end
