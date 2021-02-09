@@ -19,14 +19,43 @@ User.create!(
 
 trinkets = 
 [
-    {
-       name: "pencil",
-       price: 2
+    {     
+        name: "LPrinter",
+        price: 2
     },
     {
-        name: "controller",
+        name: "Axe",
+        price: 2
+    },
+    {
+        name: "Bath",
+        price: 2
+    },
+    {
+        name: "Camera",
+        price: 4
+    },
+    {
+        name: "Campfire",
+        price: 4
+    },
+    {
+        name: "Candle",
+        price: 4
+    },
+    {
+        name: "Coffee",
+        price: 4
+    },
+    {
+        name: "Devices",
+        price: 4
+    },
+    {
+        name: "Diamond",
         price: 4
     }
+    
 ]
 
 regions = 

@@ -29,6 +29,11 @@ class UsersController < ApplicationController
         render json: region
     end
 
+    def trinkets
+        user = User.find(params[:id])
+        render json: user.trinkets
+    end
+
     def home
         user = AuthorizeRequest.new(request.headers).user
 
