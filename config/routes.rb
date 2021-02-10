@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   delete "/users/:id/tags/:tag_id" => "users#delete_tag"
 
   get "/users/:id/zones" => "users#zones"
+  post "/users/:id/zones" => "users#add_zone"
 
   get "/users/:id/regions" => "users#regions"
   post "/users/:id/regions" => "users#purchase_region"

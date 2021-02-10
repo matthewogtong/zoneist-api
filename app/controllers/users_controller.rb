@@ -32,6 +32,15 @@ class UsersController < ApplicationController
         render json: user.zones
     end
 
+    def add_zone
+        user = User.find(params[:id])
+        tag = Tag.find_by(name: params[:tag_id])
+        region = Region.find_by(name: params[:region_id])
+        trinket = Trinket.find_by(name: params[:trinket_id])
+        zone = Zone.create!(is_active: params[:isActive], is_complete: params[:isComplete], objective: params[:objective], zone_start: params[:zoneStart], total_objective_time: params[:totalObjectiveTime], tag_id: tag.id, region_id: region.id, trinket_id: trinket.id, user_id: user.id)
+        render json: zone
+    end
+
     def regions
         user = User.find(params[:id])
         render json: user.regions
