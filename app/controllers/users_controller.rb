@@ -15,6 +15,11 @@ class UsersController < ApplicationController
         render json: user.tags
     end
 
+    def zones
+        user = User.find(params[:id])
+        render json: user.zones
+    end
+
     def regions
         user = User.find(params[:id])
         render json: user.regions
