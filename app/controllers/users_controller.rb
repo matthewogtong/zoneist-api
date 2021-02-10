@@ -15,6 +15,18 @@ class UsersController < ApplicationController
         render json: user.tags
     end
 
+    def add_tag
+        user = User.find(params[:id])
+        tag = Tag.create!(user_id: user.id, name: params[:name])
+        render json: tag
+    end
+
+    def delete_tag
+        tag = Tag.find(params[:tag_id])
+        tag.destroy
+        render json: tag
+    end
+
     def zones
         user = User.find(params[:id])
         render json: user.zones
