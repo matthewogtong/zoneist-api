@@ -1,0 +1,2 @@
+class UsertrinketsController < ApplicationController
+end
