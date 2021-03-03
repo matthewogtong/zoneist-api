@@ -82,7 +82,7 @@ regions =
     },
     {
         name: "Lofoten Islands",
-        price: 0
+        price: 5
     },
     {
         name: "Machu Picchu",
@@ -90,7 +90,7 @@ regions =
     },
     {
         name: "NYC",
-        price: 0
+        price: 8
     },
     {
         name: "Venice",
@@ -142,16 +142,51 @@ Tag.create!(
     name: "Coding"
 )
 
-10.times do 
-    Zone.create!(
+Zone.create!(
         user_id: User.first.id,
         tag_id: Tag.first.id,
         trinket_id: Trinket.first.id,
         region_id: Region.first.id,
         objective: "Work on Project",
         zone_start: Time.now
-    )
-end
+)
+
+Zone.create!(
+    user_id: User.first.id,
+    tag_id: Tag.first.id,
+    trinket_id: Trinket.first.id,
+    region_id: Region.second.id,
+    objective: "Gym",
+    zone_start: Time.now
+)
+
+Zone.create!(
+    user_id: User.first.id,
+    tag_id: Tag.first.id,
+    trinket_id: Trinket.first.id,
+    region_id: Region.third.id,
+    objective: "Blog",
+    zone_start: Time.now
+)
+
+Zone.create!(
+    user_id: User.first.id,
+    tag_id: Tag.first.id,
+    trinket_id: Trinket.first.id,
+    region_id: Region.fourth.id,
+    objective: "Study",
+    zone_start: Time.now
+)
+
+Zone.create!(
+    user_id: User.first.id,
+    tag_id: Tag.first.id,
+    trinket_id: Trinket.first.id,
+    region_id: Region.fifth.id,
+    objective: "Run",
+    zone_start: Time.now
+)
+
 
  p "Created #{User.count} user(s)"
  p "Created #{Usertrinket.count} usertrinket(s)"
