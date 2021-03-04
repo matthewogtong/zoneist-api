@@ -7,7 +7,7 @@ Region.destroy_all
 User.destroy_all
 
 User.create!(
-    username: "Admin",
+    username: "Matt",
     password: "123",
     tokens: 100
 )
@@ -142,50 +142,50 @@ Tag.create!(
     name: "Coding"
 )
 
-Zone.create!(
-        user_id: User.first.id,
-        tag_id: Tag.first.id,
-        trinket_id: Trinket.first.id,
-        region_id: Region.first.id,
-        objective: "Work on Project",
-        zone_start: Time.now
-)
+# Zone.create!(
+#         user_id: User.first.id,
+#         tag_id: Tag.first.id,
+#         trinket_id: Trinket.first.id,
+#         region_id: Region.first.id,
+#         objective: "Work on Project",
+#         zone_start: Time.now
+# )
 
-Zone.create!(
-    user_id: User.first.id,
-    tag_id: Tag.first.id,
-    trinket_id: Trinket.first.id,
-    region_id: Region.second.id,
-    objective: "Gym",
-    zone_start: Time.now
-)
+# Zone.create!(
+#     user_id: User.first.id,
+#     tag_id: Tag.first.id,
+#     trinket_id: Trinket.first.id,
+#     region_id: Region.second.id,
+#     objective: "Gym",
+#     zone_start: Time.now
+# )
 
-Zone.create!(
-    user_id: User.first.id,
-    tag_id: Tag.first.id,
-    trinket_id: Trinket.first.id,
-    region_id: Region.third.id,
-    objective: "Blog",
-    zone_start: Time.now
-)
+# Zone.create!(
+#     user_id: User.first.id,
+#     tag_id: Tag.first.id,
+#     trinket_id: Trinket.first.id,
+#     region_id: Region.third.id,
+#     objective: "Blog",
+#     zone_start: Time.now
+# )
 
-Zone.create!(
-    user_id: User.first.id,
-    tag_id: Tag.first.id,
-    trinket_id: Trinket.first.id,
-    region_id: Region.fourth.id,
-    objective: "Study",
-    zone_start: Time.now
-)
+# Zone.create!(
+#     user_id: User.first.id,
+#     tag_id: Tag.first.id,
+#     trinket_id: Trinket.first.id,
+#     region_id: Region.fourth.id,
+#     objective: "Study",
+#     zone_start: Time.now
+# )
 
-Zone.create!(
-    user_id: User.first.id,
-    tag_id: Tag.first.id,
-    trinket_id: Trinket.first.id,
-    region_id: Region.fifth.id,
-    objective: "Run",
-    zone_start: Time.now
-)
+# Zone.create!(
+#     user_id: User.first.id,
+#     tag_id: Tag.first.id,
+#     trinket_id: Trinket.first.id,
+#     region_id: Region.fifth.id,
+#     objective: "Run",
+#     zone_start: Time.now
+# )
 
 
  p "Created #{User.count} user(s)"
