@@ -4,9 +4,9 @@ class CreateZones < ActiveRecord::Migration[6.0]
       t.boolean :is_active, :default => false
       t.boolean :is_complete, :default => false
       t.text :objective
-      t.datetime :zone_start
-      t.datetime :zone_end
-      t.datetime :premature_end
+      t.string :zone_start
+      t.string :zone_end
+      t.string :premature_end
       t.integer :total_objective_time, :default => 0
       t.belongs_to :user, null: false, foreign_key: true
       t.belongs_to :tag, null: false, foreign_key: true

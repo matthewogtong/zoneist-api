@@ -70,9 +70,9 @@ ActiveRecord::Schema.define(version: 2021_02_05_171241) do
     t.boolean "is_active", default: false
     t.boolean "is_complete", default: false
     t.text "objective"
-    t.datetime "zone_start"
-    t.datetime "zone_end"
-    t.datetime "premature_end"
+    t.string "zone_start"
+    t.string "zone_end"
+    t.string "premature_end"
     t.integer "total_objective_time", default: 0
     t.bigint "user_id", null: false
     t.bigint "tag_id", null: false
