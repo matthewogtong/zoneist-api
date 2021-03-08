@@ -37,8 +37,25 @@ class UsersController < ApplicationController
         tag = Tag.find_by(name: params[:tag])
         region = Region.find_by(name: params[:region])
         trinket = Trinket.find_by(name: params[:trinket])
-        zone = Zone.create!(is_active: true, is_complete: false, objective: params[:objective], zone_start: params[:zoneStart], total_objective_time: params[:totalObjectiveTime], tag_id: tag.id, region_id: region.id, trinket_id: trinket.id, user_id: user.id)
+        zone = Zone.create!(
+            is_active: true, 
+            is_complete: false, 
+            objective: params[:objective], 
+            zone_start: params[:zoneStart], 
+            zone_start_date: params[:zoneStartDate], 
+            zone_start_month: params[:zoneStartMonth], 
+            zone_start_year: params[:zoneStartYear], 
+            zone_start_hours: params[:zoneStartHours], 
+            zone_start_minutes: params[:zoneStartMinutes], 
+            zone_start_seconds: params[:zoneStartSeconds], 
+            total_objective_time: params[:totalObjectiveTime], 
+            tag_id: tag.id, 
+            region_id: region.id, 
+            trinket_id: trinket.id, 
+            user_id: user.id
+        )
         render json: zone
+        
     end
 
     def regions
