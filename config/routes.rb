@@ -27,6 +27,7 @@ Rails.application.routes.draw do
 
   get "/users/:id/zones" => "users#zones"
   post "/users/:id/zones" => "users#add_zone"
+  patch "/users/:id/zones/:zone_id/completed" => "users#complete_zone"
 
   get "/users/:id/regions" => "users#regions"
   post "/users/:id/regions" => "users#purchase_region"
