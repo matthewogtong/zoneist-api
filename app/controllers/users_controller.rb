@@ -32,6 +32,11 @@ class UsersController < ApplicationController
         render json: user.zones
     end
 
+    def zone
+        zone = Zone.find(params[:zone_id])
+        render json: zone
+    end
+
     def add_zone
         user = User.find(params[:id])
         tag = Tag.find_by(name: params[:tag])
@@ -55,7 +60,15 @@ class UsersController < ApplicationController
             user_id: user.id
         )
         render json: zone
-        
+    end
+
+    def complete_zone
+        zone = Zone.find(params[:zone_id])
+        zone.update(
+            is_active: params[:isActive],
+            is_complete: params[:isComplete]
+        )
+        render json: zone
     end
 
     def regions
@@ -107,5 +120,4 @@ class UsersController < ApplicationController
     def user_params 
         params.permit(:username, :password)
     end
-
 end
