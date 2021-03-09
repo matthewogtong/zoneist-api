@@ -1,24 +1,10 @@
-# README
+# zoneist
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+zoneist is a productivity app set out to inspire focus for accomplishing daily objectives with a clear goal-setting.
 
-Things you may want to cover:
+## Usage
 
-* Ruby version
+## Contributing
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## License
