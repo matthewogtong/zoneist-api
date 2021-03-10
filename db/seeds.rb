@@ -70,15 +70,15 @@ regions =
     },
     {
         name: "Blue Lake Torii",
-        price: 0
+        price: 5
     },
     {
         name: "Giza",
-        price: 3
+        price: 5
     },
     {
         name: "Iguazu Falls",
-        price: 3
+        price: 5
     },
     {
         name: "Lofoten Islands",
@@ -94,7 +94,7 @@ regions =
     },
     {
         name: "Venice",
-        price: 8
+        price: 10
     }
 ]
 
@@ -186,7 +186,6 @@ Tag.create!(
 #     objective: "Run",
 #     zone_start: Time.now
 # )
-
 
  p "Created #{User.count} user(s)"
  p "Created #{Usertrinket.count} usertrinket(s)"
