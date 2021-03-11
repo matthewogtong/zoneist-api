@@ -108,7 +108,7 @@ regions =
         price: 8
     },
     {
-        name: "NYC",
+        name: "New York City",
         price: 8
     },
     {
@@ -229,8 +229,9 @@ Tag.create!(
 Zone.create!(
     user_id: User.first.id,
     tag_id: Tag.first.id,
-    trinket_id: Trinket.second.id,
-    region_id: Region.first.id,
+    trinket_id: Trinket.find(3).id,
+    region_id: Region.third.id,
+    zone_start: '1615195800',
     zone_end: '1615210200',
     is_active: false,
     is_complete: true,
@@ -246,8 +247,9 @@ Zone.create!(
 Zone.create!(
     user_id: User.first.id,
     tag_id: Tag.first.id,
-    trinket_id: Trinket.first.id,
-    region_id: Region.first.id,
+    trinket_id: Trinket.find(7).id,
+    region_id: Region.find(8).id,
+    zone_start: '1615210200',
     zone_end: '1615224600',
     is_active: false,
     is_complete: true,
@@ -263,8 +265,9 @@ Zone.create!(
 Zone.create!(
     user_id: User.first.id,
     tag_id: Tag.first.id,
-    trinket_id: Trinket.first.id,
+    trinket_id: Trinket.find(7).id,
     region_id: Region.second.id,
+    zone_start: '1615228200',
     zone_end: '1615237200',
     is_active: false,
     is_complete: true,
@@ -283,8 +286,9 @@ Zone.create!(
 Zone.create!(
         user_id: User.first.id,
         tag_id: Tag.first.id,
-        trinket_id: Trinket.second.id,
-        region_id: Region.first.id,
+        trinket_id: Trinket.find(3).id,
+        region_id: Region.third.id,
+        zone_start: '1615282200',
         zone_end: '1615314600',
         is_active: false,
         is_complete: true,
@@ -300,8 +304,9 @@ Zone.create!(
 Zone.create!(
     user_id: User.first.id,
     tag_id: Tag.first.id,
-    trinket_id: Trinket.first.id,
+    trinket_id: Trinket.find(7).id,
     region_id: Region.second.id,
+    zone_start: '1615296600',
     zone_end: '1615311000',
     is_active: false,
     is_complete: true,
@@ -317,8 +322,9 @@ Zone.create!(
 Zone.create!(
     user_id: User.first.id,
     tag_id: Tag.first.id,
-    trinket_id: Trinket.first.id,
-    region_id: Region.first.id,
+    trinket_id: Trinket.find(7).id,
+    region_id: Region.third.id,
+    zone_start: '1615314600',
     zone_end: '1615321800',
     is_active: false,
     is_complete: true,
@@ -334,8 +340,9 @@ Zone.create!(
 Zone.create!(
     user_id: User.first.id,
     tag_id: Tag.first.id,
-    trinket_id: Trinket.second.id,
-    region_id: Region.third.id,
+    trinket_id: Trinket.find(3).id,
+    region_id: Region.first.id,
+    zone_start: '1615368600',
     zone_end: '1615383000',
     is_active: false,
     is_complete: true,
@@ -351,8 +358,9 @@ Zone.create!(
 Zone.create!(
     user_id: User.first.id,
     tag_id: Tag.first.id,
-    trinket_id: Trinket.first.id,
-    region_id: Region.first.id,
+    trinket_id: Trinket.find(7).id,
+    region_id: Region.third.id,
+    zone_start: '1615383000',
     zone_end: '1615311000',
     is_active: false,
     is_complete: true,
@@ -368,8 +376,9 @@ Zone.create!(
 Zone.create!(
     user_id: User.first.id,
     tag_id: Tag.first.id,
-    trinket_id: Trinket.first.id,
-    region_id: Region.first.id,
+    trinket_id: Trinket.find(7).id,
+    region_id: Region.find(8).id,
+    zone_start: '1615404600',
     zone_end: '1615419000',
     is_active: false,
     is_complete: true,
@@ -385,8 +394,9 @@ Zone.create!(
 Zone.create!(
     user_id: User.first.id,
     tag_id: Tag.first.id,
-    trinket_id: Trinket.first.id,
-    region_id: Region.first.id,
+    trinket_id: Trinket.find(7).id,
+    region_id: Region.find(8).id,
+    zone_start: '1615449600',
     zone_end: '1615503600',
     is_active: false,
     is_complete: true,
@@ -402,8 +412,9 @@ Zone.create!(
 Zone.create!(
     user_id: User.first.id,
     tag_id: Tag.first.id,
-    trinket_id: Trinket.fourth.id,
-    region_id: Region.first.id,
+    trinket_id: Trinket.find(12).id,
+    region_id: Region.third.id,
+    zone_start: '1615467600',
     zone_end: '1615472400',
     is_active: false,
     is_complete: true,
