@@ -46,6 +46,7 @@ class UsersController < ApplicationController
             is_active: true, 
             is_complete: false, 
             objective: params[:objective], 
+            zone_end: params[:zoneEnd],
             zone_start: params[:zoneStart], 
             zone_start_date: params[:zoneStartDate], 
             zone_start_month: params[:zoneStartMonth], 
