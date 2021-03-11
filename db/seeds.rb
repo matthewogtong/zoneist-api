@@ -9,7 +9,7 @@ User.destroy_all
 User.create!(
     username: "Matt",
     password: "123",
-    tokens: 100
+    tokens: 88
 )
 
 User.create!(
@@ -40,7 +40,7 @@ trinkets =
         price: 4
     },
     {
-        name: "Candle",
+        name: "Cake",
         price: 4
     },
     {
@@ -52,10 +52,29 @@ trinkets =
         price: 4
     },
     {
-        name: "Diamond",
+        name: "Cooking",
         price: 4
+    },
+    {
+        name: "Pencil",
+        price: 5
+    },
+    {
+        name: "Game",
+        price: 5
+    },
+    {
+        name: "Koi",
+        price: 5
+    },
+    {
+        name: "Tools",
+        price: 5
+    },
+    {
+        name: "Home",
+        price: 5
     }
-    
 ]
 
 regions = 
@@ -109,12 +128,22 @@ end
 
 Usertrinket.create!(
     user_id: User.first.id,
-    trinket_id: Trinket.first.id
+    trinket_id: Trinket.third.id
 )
 
 Usertrinket.create!(
     user_id: User.first.id,
-    trinket_id: Trinket.third.id
+    trinket_id: Trinket.find(7).id
+)
+
+Usertrinket.create!(
+    user_id: User.first.id,
+    trinket_id: Trinket.find(12).id
+)
+
+Usertrinket.create!(
+    user_id: User.first.id,
+    trinket_id: Trinket.find(10).id
 )
 
 Usertrinket.create!(
@@ -124,12 +153,22 @@ Usertrinket.create!(
 
 Userregion.create!(
     user_id: User.first.id,
+    region_id: Region.third.id
+)
+
+Userregion.create!(
+    user_id: User.first.id,
     region_id: Region.first.id
 )
 
 Userregion.create!(
     user_id: User.first.id,
-    region_id: Region.second.id
+    region_id: Region.find(7).id
+)
+
+Userregion.create!(
+    user_id: User.second.id,
+    region_id: Region.find(8).id
 )
 
 Userregion.create!(
@@ -184,17 +223,72 @@ Tag.create!(
 
 Tag.create!(
     user_id: User.first.id,
-    name: "Project/Feature"
+    name: "Presentation"
 )
+
+Zone.create!(
+    user_id: User.first.id,
+    tag_id: Tag.first.id,
+    trinket_id: Trinket.second.id,
+    region_id: Region.first.id,
+    zone_end: '1615210200',
+    is_active: false,
+    is_complete: true,
+    objective: "Work on project features",
+    zone_start_date: 8,
+    zone_start_month: 2,
+    zone_start_year: 2021,
+    zone_start_hours: 9,
+    zone_start_minutes: 30,
+    total_objective_time: 240
+)
+
+Zone.create!(
+    user_id: User.first.id,
+    tag_id: Tag.first.id,
+    trinket_id: Trinket.first.id,
+    region_id: Region.first.id,
+    zone_end: '1615224600',
+    is_active: false,
+    is_complete: true,
+    objective: "Work on project features",
+    zone_start_date: 8,
+    zone_start_month: 2,
+    zone_start_year: 2021,
+    zone_start_hours: 13,
+    zone_start_minutes: 30,
+    total_objective_time: 240
+)
+
+Zone.create!(
+    user_id: User.first.id,
+    tag_id: Tag.first.id,
+    trinket_id: Trinket.first.id,
+    region_id: Region.second.id,
+    zone_end: '1615237200',
+    is_active: false,
+    is_complete: true,
+    objective: "Work on project features",
+    zone_start_date: 8,
+    zone_start_month: 2,
+    zone_start_year: 2021,
+    zone_start_hours: 18,
+    zone_start_minutes: 30,
+    total_objective_time: 150
+)
+
+# ---
+
 
 Zone.create!(
         user_id: User.first.id,
         tag_id: Tag.first.id,
-        trinket_id: Trinket.third.id,
+        trinket_id: Trinket.second.id,
         region_id: Region.first.id,
+        zone_end: '1615314600',
         is_active: false,
         is_complete: true,
-        objective: "Work on Project",
+        objective: "Work on project features",
         zone_start_date: 9,
         zone_start_month: 2,
         zone_start_year: 2021,
@@ -206,11 +300,12 @@ Zone.create!(
 Zone.create!(
     user_id: User.first.id,
     tag_id: Tag.first.id,
-    trinket_id: Trinket.third.id,
-    region_id: Region.first.id,
+    trinket_id: Trinket.first.id,
+    region_id: Region.second.id,
+    zone_end: '1615311000',
     is_active: false,
     is_complete: true,
-    objective: "Work on Project",
+    objective: "Work on project features",
     zone_start_date: 9,
     zone_start_month: 2,
     zone_start_year: 2021,
@@ -222,11 +317,46 @@ Zone.create!(
 Zone.create!(
     user_id: User.first.id,
     tag_id: Tag.first.id,
-    trinket_id: Trinket.third.id,
+    trinket_id: Trinket.first.id,
     region_id: Region.first.id,
+    zone_end: '1615321800',
     is_active: false,
     is_complete: true,
-    objective: "Work on Project",
+    objective: "Work on project features",
+    zone_start_date: 9,
+    zone_start_month: 2,
+    zone_start_year: 2021,
+    zone_start_hours: 18,
+    zone_start_minutes: 30,
+    total_objective_time: 120
+)
+
+Zone.create!(
+    user_id: User.first.id,
+    tag_id: Tag.first.id,
+    trinket_id: Trinket.second.id,
+    region_id: Region.third.id,
+    zone_end: '1615383000',
+    is_active: false,
+    is_complete: true,
+    objective: "Work on project features",
+    zone_start_date: 10,
+    zone_start_month: 2,
+    zone_start_year: 2021,
+    zone_start_hours: 9,
+    zone_start_minutes: 30,
+    total_objective_time: 240
+)
+
+Zone.create!(
+    user_id: User.first.id,
+    tag_id: Tag.first.id,
+    trinket_id: Trinket.first.id,
+    region_id: Region.first.id,
+    zone_end: '1615311000',
+    is_active: false,
+    is_complete: true,
+    objective: "Work on project features",
     zone_start_date: 10,
     zone_start_month: 2,
     zone_start_year: 2021,
@@ -234,6 +364,58 @@ Zone.create!(
     zone_start_minutes: 30,
     total_objective_time: 240
 )
+
+Zone.create!(
+    user_id: User.first.id,
+    tag_id: Tag.first.id,
+    trinket_id: Trinket.first.id,
+    region_id: Region.first.id,
+    zone_end: '1615419000',
+    is_active: false,
+    is_complete: true,
+    objective: "Work on project features",
+    zone_start_date: 10,
+    zone_start_month: 2,
+    zone_start_year: 2021,
+    zone_start_hours: 19,
+    zone_start_minutes: 30,
+    total_objective_time: 180
+)
+
+Zone.create!(
+    user_id: User.first.id,
+    tag_id: Tag.first.id,
+    trinket_id: Trinket.first.id,
+    region_id: Region.first.id,
+    zone_end: '1615503600',
+    is_active: false,
+    is_complete: true,
+    objective: "Polish Project",
+    zone_start_date: 11,
+    zone_start_month: 2,
+    zone_start_year: 2021,
+    zone_start_hours: 8,
+    zone_start_minutes: 0,
+    total_objective_time: 180
+)
+
+Zone.create!(
+    user_id: User.first.id,
+    tag_id: Tag.first.id,
+    trinket_id: Trinket.fourth.id,
+    region_id: Region.first.id,
+    zone_end: '1615472400',
+    is_active: false,
+    is_complete: true,
+    objective: "Check for bugs",
+    zone_start_date: 11,
+    zone_start_month: 2,
+    zone_start_year: 2021,
+    zone_start_hours: 1,
+    zone_start_minutes: 0,
+    total_objective_time: 80
+)
+
 
 
 
