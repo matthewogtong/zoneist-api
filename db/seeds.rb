@@ -24,11 +24,11 @@ trinkets =
         price: 2
     },
     {
-        name: "Axe",
+        name: "Bed",
         price: 2
     },
     {
-        name: "Bath",
+        name: "Coder",
         price: 2
     },
     {
@@ -114,7 +114,7 @@ Usertrinket.create!(
 
 Usertrinket.create!(
     user_id: User.first.id,
-    trinket_id: Trinket.second.id
+    trinket_id: Trinket.third.id
 )
 
 Usertrinket.create!(
@@ -139,53 +139,104 @@ Userregion.create!(
 
 Tag.create!(
     user_id: User.first.id,
-    name: "Coding"
+    name: "Project/Code"
 )
 
-# Zone.create!(
-#         user_id: User.first.id,
-#         tag_id: Tag.first.id,
-#         trinket_id: Trinket.first.id,
-#         region_id: Region.first.id,
-#         objective: "Work on Project",
-#         zone_start: Time.now
-# )
+Tag.create!(
+    user_id: User.first.id,
+    name: "Gym"
+)
 
-# Zone.create!(
-#     user_id: User.first.id,
-#     tag_id: Tag.first.id,
-#     trinket_id: Trinket.first.id,
-#     region_id: Region.second.id,
-#     objective: "Gym",
-#     zone_start: Time.now
-# )
+Tag.create!(
+    user_id: User.first.id,
+    name: "Running"
+)
 
-# Zone.create!(
-#     user_id: User.first.id,
-#     tag_id: Tag.first.id,
-#     trinket_id: Trinket.first.id,
-#     region_id: Region.third.id,
-#     objective: "Blog",
-#     zone_start: Time.now
-# )
+Tag.create!(
+    user_id: User.first.id,
+    name: "Study"
+)
 
-# Zone.create!(
-#     user_id: User.first.id,
-#     tag_id: Tag.first.id,
-#     trinket_id: Trinket.first.id,
-#     region_id: Region.fourth.id,
-#     objective: "Study",
-#     zone_start: Time.now
-# )
+Tag.create!(
+    user_id: User.first.id,
+    name: "Blog"
+)
 
-# Zone.create!(
-#     user_id: User.first.id,
-#     tag_id: Tag.first.id,
-#     trinket_id: Trinket.first.id,
-#     region_id: Region.fifth.id,
-#     objective: "Run",
-#     zone_start: Time.now
-# )
+Tag.create!(
+    user_id: User.first.id,
+    name: "Cleaning"
+)
+
+Tag.create!(
+    user_id: User.first.id,
+    name: "Sort Mail"
+)
+
+Tag.create!(
+    user_id: User.first.id,
+    name: "Resume"
+)
+
+Tag.create!(
+    user_id: User.first.id,
+    name: "LeetCode"
+)
+
+Tag.create!(
+    user_id: User.first.id,
+    name: "Project/Feature"
+)
+
+Zone.create!(
+        user_id: User.first.id,
+        tag_id: Tag.first.id,
+        trinket_id: Trinket.third.id,
+        region_id: Region.first.id,
+        is_active: false,
+        is_complete: true,
+        objective: "Work on Project",
+        zone_start_date: 9,
+        zone_start_month: 2,
+        zone_start_year: 2021,
+        zone_start_hours: 9,
+        zone_start_minutes: 30,
+        total_objective_time: 240
+)
+
+Zone.create!(
+    user_id: User.first.id,
+    tag_id: Tag.first.id,
+    trinket_id: Trinket.third.id,
+    region_id: Region.first.id,
+    is_active: false,
+    is_complete: true,
+    objective: "Work on Project",
+    zone_start_date: 9,
+    zone_start_month: 2,
+    zone_start_year: 2021,
+    zone_start_hours: 13,
+    zone_start_minutes: 30,
+    total_objective_time: 240
+)
+
+Zone.create!(
+    user_id: User.first.id,
+    tag_id: Tag.first.id,
+    trinket_id: Trinket.third.id,
+    region_id: Region.first.id,
+    is_active: false,
+    is_complete: true,
+    objective: "Work on Project",
+    zone_start_date: 10,
+    zone_start_month: 2,
+    zone_start_year: 2021,
+    zone_start_hours: 13,
+    zone_start_minutes: 30,
+    total_objective_time: 240
+)
+
+
+
 
  p "Created #{User.count} user(s)"
  p "Created #{Usertrinket.count} usertrinket(s)"
