@@ -64,6 +64,10 @@ class UsersController < ApplicationController
     end
 
     def complete_zone
+        user = User.find(params[:id])
+        user.update(
+            tokens: user.tokens + 3
+        )
         zone = Zone.find(params[:zone_id])
         zone.update(
             is_active: params[:isActive],
