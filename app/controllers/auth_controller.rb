@@ -4,7 +4,6 @@ class AuthController < ApplicationController
   def register
     user = User.create(register_params)
     if user.valid?
-      # send back a token that they can use to re-authenticate themselves
       token = encode_token({ user_id: user.id })
       render json: { user: UserSerializer.new(user), token: token }, status: :created
     else
@@ -14,15 +13,11 @@ class AuthController < ApplicationController
 
   # post "/login"
   def login
-    # find user
     user = User.find_by(username: params[:username])
-    # authenticate password
     if user && user.authenticate(params[:password])
-      # send back a token that they can use to re-authenticate themselves
       token = encode_token({ user_id: user.id })
       render json: { user: UserSerializer.new(user), token: token } 
     else
-      # if not, send an error
       render json: { error: "Invalid username or password" }, status: :unauthorized
     end
   end
