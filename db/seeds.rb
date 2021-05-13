@@ -100,6 +100,11 @@ regions =
         price: 5
     },
     {
+        name: "Kauai",
+        price: 7
+
+    },
+    {
         name: "Lofoten Islands",
         price: 5
     },
