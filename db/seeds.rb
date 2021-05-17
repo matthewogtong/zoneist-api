@@ -127,6 +127,10 @@ regions =
     {
         name: "Venice",
         price: 10
+    },
+    {
+        name: "Yosemite",
+        price: 10
     }
 ]
 
