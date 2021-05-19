@@ -117,6 +117,10 @@ regions =
         price: 8
     },
     {
+        name: "Niagara Falls",
+        price: 5
+    },
+    {
         name: "Osaka",
         price: 8
     },
