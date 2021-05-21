@@ -129,6 +129,10 @@ regions =
         price: 10
     },
     {
+        name: "Shibuya Crossing",
+        price: 8
+    },
+    {
         name: "Venice",
         price: 10
     },
