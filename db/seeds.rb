@@ -113,6 +113,10 @@ regions =
         price: 8
     },
     {
+        name: "Mykonos",
+        price: 5
+    },
+    {
         name: "New York City",
         price: 8
     },
