@@ -74,6 +74,10 @@ trinkets =
     {
         name: "Home",
         price: 5
+    },
+    {
+        name: "Astronaut",
+        price: 99
     }
 ]
 
