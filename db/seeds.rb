@@ -78,6 +78,10 @@ trinkets =
     {
         name: "Astronaut",
         price: 99
+    },
+    {
+        name: "Idea",
+        price: 77
     }
 ]
 
