@@ -37,12 +37,6 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-# dotenv to hide api keys
-gem 'dotenv-rails', groups: [:development, :test]
-
-# rest-client to communicate with API
-gem 'rest-client'
-
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
