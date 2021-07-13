@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   # AUTH
   post "/register" => "auth#register"
   post "/login" => "auth#login"
-  post "/register" => "auth#register"
 
   # USER ROUTES
   get "/users" => "users#index"
