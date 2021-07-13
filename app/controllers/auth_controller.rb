@@ -29,7 +29,7 @@ class AuthController < ApplicationController
   end
   
   def encode_token(payload)
-    JWT.encode(payload, SECRET_KEY_BASE, "HS256")
+    JWT.encode(payload, ENV['SECRET_KEY_BASE'], "HS256")
   end
 
 end
