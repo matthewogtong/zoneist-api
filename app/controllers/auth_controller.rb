@@ -1,4 +1,4 @@
-JWT.encodeclass AuthController < ApplicationController
+class AuthController < ApplicationController
   
   # post /register
   def register
