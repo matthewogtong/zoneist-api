@@ -1,4 +1,4 @@
-class AuthController < ApplicationController
+JWT.encodeclass AuthController < ApplicationController
   
   # post /register
   def register
@@ -29,7 +29,7 @@ class AuthController < ApplicationController
   end
   
   def encode_token(payload)
-    JWT.encode(payload, Rails.application.secrets.secret_key_base, "HS256")
+    JWT.encode(payload, SECRET_KEY_BASE, "HS256")
   end
 
 end
