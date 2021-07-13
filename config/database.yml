@@ -78,11 +78,8 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-
-DATABASE_URL="https://zoneist.herokuapp.com/"
 production:
   <<: *default
   database: zoneist_api_production
   username: zoneist_api
   password: <%= ENV['ZONEIST_API_DATABASE_PASSWORD'] %>
-  url: DATABASE_URL
