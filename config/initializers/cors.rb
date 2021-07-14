@@ -7,7 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'zoneist.app' #change this when you deploy ex. 'app.netlify.com'
+    origins '*' #change this when you deploy ex. 'app.netlify.com'
 
     resource '*',
       headers: :any,
